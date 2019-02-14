@@ -9,6 +9,6 @@ RUN mkdir /etc/ssl/caddy
 RUN chmod 0770 /etc/ssl/caddy
 RUN mkdir /var/www
 
-EXPOSE 80
+EXPOSE 80 443 2015
 
 ENTRYPOINT nohup sh -c '/usr/local/bin/caddy -log stdout -agree=true -conf=/etc/caddy/Caddyfile -root=/var/tmp'
